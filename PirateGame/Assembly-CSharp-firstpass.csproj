@@ -70,11 +70,11 @@
     <Compile Include="Assets/Standard Assets/Utility/CurveControlledBob.cs" />
     <Compile Include="Assets/Standard Assets/Vehicles/Aircraft/Scripts/AeroplaneController.cs" />
     <Compile Include="Assets/Standard Assets/Utility/AutoMoveAndRotate.cs" />
-    <Compile Include="Assets/Standard Assets/Environment/Water/Water/Scripts/Displace.cs" />
     <Compile Include="Assets/Standard Assets/Utility/LerpControlledBob.cs" />
+    <Compile Include="Assets/Standard Assets/Environment/Water/Water/Scripts/Displace.cs" />
     <Compile Include="Assets/Standard Assets/ParticleSystems/Scripts/ExtinguishableParticleSystem.cs" />
-    <Compile Include="Assets/Standard Assets/Cameras/Scripts/FreeLookCam.cs" />
     <Compile Include="Assets/Standard Assets/Characters/RollerBall/Scripts/Ball.cs" />
+    <Compile Include="Assets/Standard Assets/Cameras/Scripts/FreeLookCam.cs" />
     <Compile Include="Assets/Standard Assets/2D/Scripts/Platformer2DUserControl.cs" />
     <Compile Include="Assets/Standard Assets/Cameras/Scripts/LookatTarget.cs" />
     <Compile Include="Assets/Standard Assets/Characters/FirstPersonCharacter/Scripts/RigidbodyFirstPersonController.cs" />
@@ -92,8 +92,8 @@
     <Compile Include="Assets/Standard Assets/2D/Scripts/CameraFollow.cs" />
     <Compile Include="Assets/Standard Assets/Vehicles/Car/Scripts/WheelEffects.cs" />
     <Compile Include="Assets/Standard Assets/Utility/AutoMobileShaderSwitch.cs" />
-    <Compile Include="Assets/Standard Assets/Vehicles/Car/Scripts/SkidTrail.cs" />
     <Compile Include="Assets/Standard Assets/Environment/Water/Water/Scripts/GerstnerDisplace.cs" />
+    <Compile Include="Assets/Standard Assets/Vehicles/Car/Scripts/SkidTrail.cs" />
     <Compile Include="Assets/Standard Assets/CrossPlatformInput/Scripts/TouchPad.cs" />
     <Compile Include="Assets/Standard Assets/Characters/FirstPersonCharacter/Scripts/MouseLook.cs" />
     <Compile Include="Assets/Standard Assets/Environment/Water/Water/Scripts/WaterTile.cs" />
@@ -445,6 +445,9 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="ArchimedsLab">
+      <HintPath>Assets/FloatingEntities/Scripts/ArchimedsLab.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>/Applications/Unity/Hub/Editor/2022.3.7f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

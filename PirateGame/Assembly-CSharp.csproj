@@ -58,14 +58,24 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.7f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/SampleScenes/Menu/Scripts/PauseMenu.cs" />
-    <Compile Include="Assets/SampleScenes/Scripts/LevelReset.cs" />
-    <Compile Include="Assets/SampleScenes/Menu/Scripts/SceneAndURLLoader.cs" />
-    <Compile Include="Assets/SampleScenes/Scripts/PlaceTargetWithMouse.cs" />
-    <Compile Include="Assets/SampleScenes/Scripts/ParticleSceneControls.cs" />
-    <Compile Include="Assets/SampleScenes/Menu/Scripts/MenuSceneLoader.cs" />
-    <Compile Include="Assets/SampleScenes/Scripts/SlowMoButton.cs" />
-    <Compile Include="Assets/SampleScenes/Scripts/CameraSwitch.cs" />
+    <Compile Include="Assets/FloatingEntities/Scripts/Tools/Proxies.cs" />
+    <Compile Include="Assets/FloatingEntities/Scripts/BoatController.cs" />
+    <Compile Include="Assets/FloatingEntities/Scripts/OceanAdvanced.cs" />
+    <Compile Include="Assets/FloatingEntities/Scripts/WakeGenerator.cs" />
+    <Compile Include="Assets/FloatingEntities/Scripts/Orbital.cs" />
+    <Compile Include="Assets/FloatingEntities/Scripts/SplashGenerator.cs" />
+    <Compile Include="Assets/FloatingEntities/Scripts/GameEntity/GameEntity.cs" />
+    <Compile Include="Assets/FloatingEntities/Scripts/GameEntity/FloatingGameEntityStorm.cs" />
+    <Compile Include="Assets/GameManager.cs" />
+    <Compile Include="Assets/FloatingEntities/Scripts/GameEntity/FloatingGameEntityFlat.cs" />
+    <Compile Include="Assets/FloatingEntities/Scripts/GameEntity/FloatingGameEntityRealist.cs" />
+    <Compile Include="Assets/FloatingEntities/Scripts/PropellerBoats.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets/FloatingEntities/Shaders/Ocean.shader" />
+    <None Include="Assets/FloatingEntities/Shaders/OceanAdvanced.shader" />
+    <None Include="Assets/FloatingEntities/Scripts/ArchimedsLab.dll" />
+    <None Include="Assets/FloatingEntities/Shaders/WaterToolBox.cginc" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -322,6 +332,9 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="ArchimedsLab">
+      <HintPath>Assets/FloatingEntities/Scripts/ArchimedsLab.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>/Applications/Unity/Hub/Editor/2022.3.7f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
