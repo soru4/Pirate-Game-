@@ -58,8 +58,10 @@ public class GameManager : MonoBehaviour
 
         v0 = velocity * new Vector3(
             Mathf.Cos(theta) * Mathf.Cos(phi),
-            Mathf.Sin(phi),
+            //Mathf.Sin(phi),
+            0,
             Mathf.Sin(theta) * Mathf.Cos(phi)
+            
         );
 
         //print(v0);
