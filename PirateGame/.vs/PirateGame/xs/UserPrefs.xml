@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{0658773C-97AB-F51B-8991-5EC830C7A4F9}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Kenney Assets/Pirate Kit/Models/FBX format/ship_light.fbx">
+    <Files>
+      <File FileName="Assets/FloatingEntities/Scripts/OceanAdvanced.cs" Line="42" Column="124" />
+      <File FileName="Assets/FloatingEntities/Shaders/OceanAdvanced.shader" Line="279" Column="4" />
+      <File FileName="Assets/FloatingEntities/Scripts/GameEntity/FloatingGameEntityRealist.cs" Line="42" Column="14" />
+      <File FileName="Assets/FloatingEntities/Scripts/GameEntity/GameEntity.cs" />
+      <File FileName="Assets/FloatingEntities/Scripts/Tools/Proxies.cs" />
+      <File FileName="Assets/FloatingEntities/Scripts/PropellerBoats.cs" />
+      <File FileName="Assets/FloatingEntities/Shaders/WaterToolBox.cginc" Line="39" Column="2" />
+      <File FileName="Assets/Kenney Assets/Pirate Kit/Models/FBX format/ship_light.fbx" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="PirateGame" expanded="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c2d7669b-6377-4e7c-96e2-c592308534ed" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
