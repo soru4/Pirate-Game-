@@ -59,16 +59,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/FloatingEntities/Scripts/Tools/Proxies.cs" />
+    <Compile Include="Assets/Scripts/Boyancy.cs" />
     <Compile Include="Assets/FloatingEntities/Scripts/BoatController.cs" />
     <Compile Include="Assets/FloatingEntities/Scripts/OceanAdvanced.cs" />
     <Compile Include="Assets/FloatingEntities/Scripts/WakeGenerator.cs" />
     <Compile Include="Assets/FloatingEntities/Scripts/Orbital.cs" />
+    <Compile Include="Assets/Scripts/BoatFollows.cs" />
     <Compile Include="Assets/FloatingEntities/Scripts/SplashGenerator.cs" />
     <Compile Include="Assets/FloatingEntities/Scripts/GameEntity/GameEntity.cs" />
     <Compile Include="Assets/FloatingEntities/Scripts/GameEntity/FloatingGameEntityStorm.cs" />
     <Compile Include="Assets/FloatingEntities/Scripts/GameEntity/FloatingGameEntityFlat.cs" />
     <Compile Include="Assets/FloatingEntities/Scripts/GameEntity/FloatingGameEntityRealist.cs" />
     <Compile Include="Assets/FloatingEntities/Scripts/PropellerBoats.cs" />
+    <Compile Include="Assets/Scripts/WaterBody.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/FloatingEntities/Shaders/Ocean.shader" />
