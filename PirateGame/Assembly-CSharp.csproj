@@ -64,10 +64,15 @@
     <Compile Include="Assets/FloatingEntities/Scripts/OceanAdvanced.cs" />
     <Compile Include="Assets/FloatingEntities/Scripts/WakeGenerator.cs" />
     <Compile Include="Assets/FloatingEntities/Scripts/Orbital.cs" />
+    <Compile Include="Assets/Scripts/Movers.cs" />
+    <Compile Include="Assets/ParticlePackCW/PMaterials/HealthBar.cs" />
     <Compile Include="Assets/Scripts/BoatFollows.cs" />
+    <Compile Include="Assets/Scripts/ShipMovement.cs" />
+    <Compile Include="Assets/Scripts/GameManager.cs" />
     <Compile Include="Assets/FloatingEntities/Scripts/SplashGenerator.cs" />
     <Compile Include="Assets/FloatingEntities/Scripts/GameEntity/GameEntity.cs" />
     <Compile Include="Assets/FloatingEntities/Scripts/GameEntity/FloatingGameEntityStorm.cs" />
+    <Compile Include="Assets/Scripts/DestroyAtHeight.cs" />
     <Compile Include="Assets/FloatingEntities/Scripts/GameEntity/FloatingGameEntityFlat.cs" />
     <Compile Include="Assets/FloatingEntities/Scripts/GameEntity/FloatingGameEntityRealist.cs" />
     <Compile Include="Assets/FloatingEntities/Scripts/PropellerBoats.cs" />

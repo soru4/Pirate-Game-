@@ -366,8 +366,13 @@
 "Assets/FloatingEntities/Scripts/SplashGenerator.cs"
 "Assets/FloatingEntities/Scripts/Tools/Proxies.cs"
 "Assets/FloatingEntities/Scripts/WakeGenerator.cs"
+"Assets/ParticlePackCW/PMaterials/HealthBar.cs"
 "Assets/Scripts/BoatFollows.cs"
 "Assets/Scripts/Boyancy.cs"
+"Assets/Scripts/DestroyAtHeight.cs"
+"Assets/Scripts/GameManager.cs"
+"Assets/Scripts/Movers.cs"
+"Assets/Scripts/ShipMovement.cs"
 "Assets/Scripts/WaterBody.cs"
 -langversion:9.0
 

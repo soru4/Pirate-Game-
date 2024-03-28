@@ -62,7 +62,7 @@ public class Boyancy : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        coll = GetComponent<Collider>();
+
     }
 
     private void Update()
@@ -87,20 +87,15 @@ public class Boyancy : MonoBehaviour
 
     public float GetDepthPower() => depthPower;
 
-    //if this object fully submerged into water, returns true.
-    public bool IsUnderWater() => isWaterBodySet && yBound > coll.bounds.max.y;
-
-    //if this object floating on surface of water, returns true.
-    public bool IsFloating() => isWaterBodySet && !(yBound > coll.bounds.max.y);
-
 
 
     //  ▀▄▀▄▀▄ Trigger Functions ▄▀▄▀▄▀
 
 
 
-    float getHeight (Vector3 pos)
+    public static float getHeight (Vector3 pos)
     {
+       
         const float eps = 0.5f;
         return (OceanAdvanced.GetWaterHeight(pos + new Vector3(-eps, 0F, -eps))
               + OceanAdvanced.GetWaterHeight(pos + new Vector3(eps, 0F, -eps))
@@ -108,22 +103,19 @@ public class Boyancy : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        //rb.AddForce(0f, -9.8f, 0f);
-        if (getHeight(transform.position) > transform.position.y - shipOffsetGrounnd)
+        
+        if (getHeight(transform.position) > transform.position.y )
         {
 
-            float objectYValue = getHeight(transform.position) + (offsetY -shipOffsetGrounnd);
+            float objectYValue = getHeight(transform.position);
             // we are underwater
             float buoyantForceMass = buoyantForce * rb.mass;
-            float underWaterBuoyantForce = Mathf.Clamp01((yBound - objectYValue) * depthPower); //can be inline below
-            float buoyency = buoyantForceMass + (buoyantForceMass * underWaterBuoyantForce); //can be inline below
+            float underWaterBuoyantForce =  objectYValue * depthPower;
+            float buoyency = buoyantForceMass + (buoyantForceMass * underWaterBuoyantForce); 
             rb.AddForce(0f, buoyency, 0f );
         }
-        else if(transform.position.y >= shipOffsetGrounnd)
-        {
-            
-        }
-        transform.position = new Vector3(transform.position.x, transform.position.y - 0.11f, transform.position.z);
+
+        rb.AddForce(0f, -9.8f, 0f);
     }
     /*
     private void OnTriggerStay(Collider water)

@@ -283,7 +283,7 @@
 				float decodedDepth;
 				DecodeDepthNormal( tex2D( _CameraDepthNormalsTexture, i.uv), decodedDepth, normal);
 				float4 pixelPosition = float4(i.cameraRay * decodedDepth, 0.0);
-				//float3 reflected = tex2Dproj(_RefractionTex, UNITY_PROJ_COORD(pixelPosition)) * _ReflectionColor; 
+				float3 reflected = tex2Dproj(_RefractionTex, UNITY_PROJ_COORD(pixelPosition)) * _ReflectionColor; 
 			#endif
 
 			
@@ -306,13 +306,13 @@
 		/* Possible depth color */
 		float atten = max(1.0 - dot(eye, eye) * 0.001, 0.0);
 		baseColor.rgb += _WaterColor * (i.world_position.y + 0.6) * 0.18 * atten;
-		/*	
+		
 		#ifdef SPECULAR
 			float spec = specular(vertex_normal * 0.2 + detail_normal * 0.8, l, eye, 60.0);
 			baseColor.rgb += sun_color * spec;
 		#endif
-		*/
-		/*
+		
+
 		#ifdef FOAM
 			half3 foamColor = tex2D(_Foam, i.world_position.xz * 0.1 + _Time.xx * 0.5 + distort).rgb;
 			//baseColor.rgb += foamColor * smoothstep(0.2, 1.5, depthFactor);
@@ -323,7 +323,7 @@
 			baseColor = saturate(baseColor);
 			baseColor.rgb += foamColor * clamp(wave_foam + smoothstep(0.2, 1.5, depthFactor), 0.0, 0.5);
 		#endif
-		*/
+
 		UNITY_APPLY_FOG(i.fogCoord, baseColor);
 
 		baseColor = saturate(baseColor);

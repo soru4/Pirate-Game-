@@ -24,7 +24,7 @@ public class WakeGenerator : MonoBehaviour
     {
       Vector3 p = transform.position + transform.rotation * offset;
       if (OceanAdvanced.GetWaterHeight(p) > p.y)
-        ocean.RegisterInteraction(p, Mathf.Clamp01(speed / 15.0F) * 0.5F);
+        ocean.RegisterInteraction(p, Mathf.Clamp01(speed / 15.0F) * 0.7F);
     }
   }
 
