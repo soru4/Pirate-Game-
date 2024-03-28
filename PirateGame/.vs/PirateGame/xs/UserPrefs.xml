@@ -1,13 +1,17 @@
 ﻿<Properties StartupConfiguration="{0658773C-97AB-F51B-8991-5EC830C7A4F9}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GameManager.cs">
     <Files>
-      <File FileName="Assets/GameManager.cs" Line="32" Column="1" />
+      <File FileName="Assets/GameManager.cs" Line="54" Column="58" />
+      <File FileName="Assets/ShipMovement.cs" Line="44" Column="1" />
+      <File FileName="Assets/DestroyAtHeight.cs" Line="16" Column="106" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="PirateGame" expanded="True">
-            <Node name="Assets" expanded="True" selected="True" />
+            <Node name="Assets" expanded="True">
+              <Node name="GameManager.cs" selected="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
@@ -15,7 +19,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="9805c6ec-20b6-4f03-ba5d-87779c2b4655" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="489495d6-6516-4a9d-aa4d-b428f1194baf" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

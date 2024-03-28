@@ -26,42 +26,40 @@ public class GameManager : MonoBehaviour
         Physics.Raycast(origin, pos - origin, out RaycastHit hit);
         mouseWorldPos = hit.point;
 
-        //if (Input.GetMouseButtonDown(0))
-        //{
+        if (Input.GetMouseButtonDown(0))
+        {
             Click();
-        //}
+        }
     }
 
     void Click()
     {
         Vector3 flatFP = new (fireOrigin.position.x, 0, fireOrigin.position.z);
         Vector3 flatMP = new (mouseWorldPos.x, 0, mouseWorldPos.z);
-        float theta = Vector3.SignedAngle(flatMP - flatFP + Vector3.right, Vector3.right, Vector3.up) + 180;
+        float theta = Vector3.SignedAngle(flatMP - flatFP + Vector3.right, Vector3.right, Vector3.up) + 90;
 
         float dist = Vector3.Distance(flatFP, flatMP);
         float height = fireOrigin.position.y - mouseWorldPos.y;
         float g = Physics.gravity.y;
-        print(dist + "   " + height);
+        
 
-        float a = -g * dist * dist * 0.5f * vInvSqr;
+        float a = g * dist * dist * 0.5f * vInvSqr;
         // b = dist
         // c = height + a
-
+        
         float tangent = Quad(a, dist, height + a);
-        float phi = 90 - Mathf.Atan(tangent) * Mathf.Rad2Deg;
-        print(theta + "  |   " + phi);
+        float phi = Mathf.Atan(tangent) * Mathf.Rad2Deg;
 
-        cannonBase.localEulerAngles = new Vector3(0, 180-theta, 0);
-        cannon.localEulerAngles = new Vector3(180 - phi, 0, 0);
+        cannonBase.localEulerAngles = new Vector3(0, 90-theta, 0);
+        cannon.localEulerAngles = new Vector3(phi, 0, 0);
 
         theta *= Mathf.Deg2Rad; phi *= Mathf.Deg2Rad;
 
         v0 = velocity * new Vector3(
-            Mathf.Cos(theta) * Mathf.Cos(phi),
-            //Mathf.Sin(phi),
-            0,
-            Mathf.Sin(theta) * Mathf.Cos(phi)
-            
+            Mathf.Sin(theta) * Mathf.Cos(phi),
+            Mathf.Sin(phi),
+            //0,
+            -Mathf.Cos(theta) * Mathf.Cos(phi)
         );
 
         //print(v0);
@@ -69,15 +67,14 @@ public class GameManager : MonoBehaviour
         {
             Rigidbody ball = Instantiate(cannonBall, fireOrigin.position, Quaternion.identity).GetComponent<Rigidbody>();
             ball.velocity = v0;
-            Destroy(ball.gameObject, 5f);
         }
         float Quad(float a, float b, float c)
         {
-            print(b * b - 4 * a * c);
-            return b * b - 4 * a * c > 0 ? (-b - Mathf.Sqrt(b * b - 4 * a * c)) / 2 * a : 0;
+            return b * b - 4 * a * c > 0 ? (-b + Mathf.Sqrt(b * b - 4 * a * c)) * 0.5f / a : 0;
         }
     }
 
+    /*
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
@@ -85,4 +82,5 @@ public class GameManager : MonoBehaviour
         Gizmos.color = Color.blue;
         Gizmos.DrawSphere(fireOrigin.position + v0, 0.75f);
     }
+    */
 }
